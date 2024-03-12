@@ -18,9 +18,9 @@ function Banner() {
     }
     fetchData();
 }, [])
-    function truncate(string, n) {
-        return string?.length > n ? string.substr(0, n - 1) + '...' : string;
-    }
+    {
+        const truncate = (text, wordCount ) => text?.length > wordCount ? text.substr(0, wordCount - 1) + "...": text;
+
   return <header 
   className='banner' 
   style={
@@ -46,5 +46,5 @@ function Banner() {
 
   </header>
 }
-
+}
 export default Banner
