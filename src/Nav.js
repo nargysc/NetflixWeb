@@ -2,16 +2,11 @@ import React, { useEffect, useState } from 'react'
 import "./Nav.css";
 
 function Nav() {
-    /*nav scroll dissapears*/
-    const [show, handShow] = useState(false);
+    /*nav scroll */
+        const [show, handShow] = useState(false);
     const transitionNavBar = () => {
-    if (window.scrollY > 100) {
-        handShow(true);
-     } else {
-handShow(false);
-        }
-    };
-
+    handShow(window.scrollY > 100);
+    }
     useEffect(() => {
     window.addEventListener('scroll', transitionNavBar);
     return() => window.removeEventListener("scroll", transitionNavBar);
