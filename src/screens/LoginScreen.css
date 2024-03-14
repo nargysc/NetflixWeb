@@ -1,6 +1,9 @@
 .loginScreen {
     position: relative;
     height: 100%;
+    background: url("https://pngimg.com/d/netflix_PNG10.png");
+    background-repeat: no-repeat;
+
 }
 
 .loginScreen__logo {
@@ -22,4 +25,18 @@
     font-weight: 600;
     cursor: pointer;
     top: 20px;
+}
+
+.loginScreen__gradient {
+    width: 100%;
+    z-index: 1;
+    height: 100vh;
+    background: rgba(0,0, 0, 0.4);
+    background-image: linear-gradient(
+        to top,
+        rgba(0,0,0,0.8), 0,
+        rgba(0,0,0,0) 60%,
+        rgba(0,0,0,0.8) 100%,
+
+    );
 }
