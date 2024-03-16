@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { auth } from "./firebase";
 import { login, logout, selectUser } from "./features/userSlice";
 import { useDispatch, useSelector } from "react-redux";
+import ProfileScreen from "./screens/ProfileScreen";
 
 function App() {
   const user = useSelector(selectUser);
@@ -26,7 +27,7 @@ function App() {
     });
     return unsubscribe;
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [dispatch]);
 
   return (
     <div className="app">
@@ -35,6 +36,9 @@ function App() {
           <LoginScreen />
         ) : (
           <Switch>
+            <Route path="/profile">
+              <ProfileScreen />
+            </Route>
             <Route exact path="/">
               <HomeScreen />
             </Route>
