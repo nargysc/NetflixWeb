@@ -5,10 +5,7 @@ import LoginScreen from "./screens/LoginScreen";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { auth } from "./firebase";
 import { login, logout } from "./features/userSlice";
-import { useDispatch } from 'react-redux';
-
-
-
+import { useDispatch } from "react-redux";
 
 function App() {
   const user = null;
@@ -17,14 +14,14 @@ function App() {
   useEffect(() => {
     const unsubsrcibe = auth.onAuthStateChanged((userAuth) => {
       if (userAuth) {
-    dispatch(
-      login({
-      uid: userAuth.uid,
-      email: userAuth.email,
-        })
-    );
+        dispatch(
+          login({
+            uid: userAuth.uid,
+            email: userAuth.email,
+          })
+        );
       } else {
-   dispatch(logout);
+        dispatch(logout);
       }
     });
 
