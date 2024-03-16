@@ -30,7 +30,7 @@ function LoginScreen() {
               Ready to watch? Enter your email to create or restart your
               membership.
             </h3>
-            <div class="loginScreen__input">
+            <div className="loginScreen__input">
               <form>
                 <input type="email" placeholder="Email Adress" />
                 <button

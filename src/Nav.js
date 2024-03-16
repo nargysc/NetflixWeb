@@ -12,9 +12,9 @@ function Nav() {
       window.removeEventListener("scroll", handShow(window.scrollY > 100));
   }, []);
   return (
-    <div class="nav">
+    <div className="nav">
       <div className={`nav ${show && "nav__black"}`}>
-        <div class="nav__contents">
+        <div className="nav__contents">
           <img
             className="nav__logo"
             src="https://pngimg.com/d/netflix_PNG10.png"
