@@ -3,15 +3,14 @@ import "./Nav.css";
 
 function Nav() {
   /*nav scroll */
-  const [show, handShow] = useState(false);
-  const transitionNavBar = () => {
-    handShow(window.scrollY > 100);
-  };
-  useEffect(() => {
-    window.addEventListener("scroll", transitionNavBar);
-    return () => window.removeEventListener("scroll", transitionNavBar);
-  }, []);
 
+  const [show, handShow] = useState(false);
+
+  useEffect(() => {
+    window.addEventListener("scroll", handShow(window.scrollY > 100));
+    return () =>
+      window.removeEventListener("scroll", handShow(window.scrollY > 100));
+  }, []);
   return (
     <div class="nav">
       <div className={`nav ${show && "nav__black"}`}>
@@ -32,5 +31,4 @@ function Nav() {
     </div>
   );
 }
-
 export default Nav;
