@@ -31,9 +31,7 @@ function SignupScreen() {
       .then((authUser) => {
         console.log(authUser);
       })
-      .catch((error) => {
-        alert(error.message);
-      });
+      .catch((error) => alert(error.message));
   };
 
   return (
