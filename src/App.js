@@ -8,7 +8,6 @@ import { login, logout, selectUser } from "./features/userSlice";
 import { useDispatch, useSelector } from "react-redux";
 import ProfileScreen from "./screens/ProfileScreen";
 import PlansScreen from "./screens/PlansScreen";
-import { updateSub } from "./features/subSlice";
 
 function App() {
   const user = useSelector(selectUser);
@@ -28,20 +27,11 @@ function App() {
           .get()
           .then((querySnapshot) => {
             querySnapshot.forEach(async (subscription) => {
-              dispatch(
-                updateSub({
-                  role: subscription.data().role,
-                  current_period_end:
-                    subscription.data().current_period_end.seconds,
-                  current_period_start:
-                    subscription.data().current_period_start,
-                })
-              );
+              dispatch();
             });
           });
       } else {
         dispatch(logout());
-        dispatch(updateSub(null));
       }
     });
 
