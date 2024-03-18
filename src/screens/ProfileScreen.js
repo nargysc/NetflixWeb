@@ -13,7 +13,7 @@ function ProfileScreen() {
     <div className="profileScreen">
       <Nav />
       <div className="profileScreen__body">
-        <h1>Edit Profile</h1>
+        <h1>Maybe it's time to upgrade Premium 😍😏</h1>
         <div className="profileScreen__info">
           <img
             src="https://i.pinimg.com/474x/44/78/1b/44781ba4ac0c63f2ecf0793a533bf8dc.jpg"

@@ -64,3 +64,18 @@
   border: none;
   cursor: pointer;
 }
+
+@media screen and (max-width: 1366px) {
+  .profileScreen__body {
+    position: fixed;
+  }
+  .profileScreen__body > h1 {
+    font-size: 2rem;
+    margin-top: 40px;
+    font-weight: 300;
+  }
+  .profileScreen__info {
+    display: flex;
+    flex-direction: row;
+  }
+}

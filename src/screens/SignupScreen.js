@@ -23,6 +23,7 @@ function SignupScreen() {
   };
   const signIn = (e) => {
     e.preventDefault();
+
     auth
       .signInWithEmailAndPassword(
         emailRef.current.value,
@@ -31,23 +32,24 @@ function SignupScreen() {
       .then((authUser) => {
         console.log(authUser);
       })
-      .catch((error) => alert(error.message));
+      .catch((error) => {
+        alert(error.message);
+      });
   };
 
   return (
     <div className="signupScreen">
       <form>
-        <h1>Sign In</h1>
+        <h1>Hey, Netflix Lover 🥰</h1>
         <input ref={emailRef} placeholder="Email" type="email" />
         <input ref={passwordRef} placeholder="Password" type="password" />
         <button type="submit" onClick={signIn}>
           Sign In
         </button>
         <h4>
-          {" "}
-          <span className="signupScreen__gray">New to Netflix?</span>
+          <span className="signupScreen__gray"> New to Netflix?</span>
           <span className="signupScreen__link" onClick={register}>
-            Register now.{" "}
+            Register now.
           </span>
         </h4>
       </form>

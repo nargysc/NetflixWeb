@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./LoginScreen.css";
 import "./SignupScreen";
 import SignupScreen from "./SignupScreen";
+import Video from "../screens/netflix.mp4";
 
 function LoginScreen() {
   const [signIn, setSignIn] = useState(false);
@@ -13,10 +14,10 @@ function LoginScreen() {
           src="https://pngimg.com/d/netflix_PNG10.png"
           alt=""
         />
+        <video controls autoPlay loop muted src={Video} type="netflix.mp4" />
         <button onClick={() => setSignIn(true)} className="loginScreen__button">
           Sign In
         </button>
-        <div className="loginScreen__gradient" />
       </div>
 
       <div className="loginScreen__body">

@@ -37,12 +37,8 @@ function App() {
         ) : (
           <Switch>
             <Route path="/profile" component={ProfileScreen} />
-            <Route path="/plans">
-              <PlansScreen />
-            </Route>
-            <Route exact path="/">
-              <HomeScreen />
-            </Route>
+            <Route path="/plans" component={PlansScreen} />
+            <Route exact path="/" component={HomeScreen} />
           </Switch>
         )}
       </Router>

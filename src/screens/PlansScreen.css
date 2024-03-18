@@ -1,11 +1,20 @@
-.plansScreen > button {
-  padding: 16px 30px;
+.plansScreen {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.plansScreen__info > button {
+  padding: 6px 10px;
   font-size: 0.9rem;
   border-radius: 10px;
   border: none;
   color: #fff;
   font-weight: 600;
   background-color: #e50914;
+  text-align: center;
   cursor: pointer;
 }
 
@@ -17,15 +26,9 @@
   padding: 10px;
 }
 
-.plansScreen__info > h2:hover {
-  opacity: 1;
-  cursor: pointer;
-  width: 94px;
-  border: none;
-  border-radius: 10px;
-  padding: 10px;
-  border: none;
-  background-color: #e50914;
+.plansScreen__info > button:hover {
+  background-color: #fff;
+  color: #e50914;
 }
 
 .plansScreen__info > h5 {

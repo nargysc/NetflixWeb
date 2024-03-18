@@ -1,8 +1,6 @@
 .loginScreen {
   position: relative;
   height: 100%;
-  background: url("https://user-images.githubusercontent.com/33485020/108069438-5ee79d80-7089-11eb-8264-08fdda7e0d11.jpg")
-    center no-repeat;
   background-size: cover;
 }
 
@@ -25,20 +23,6 @@
   font-weight: 600;
   cursor: pointer;
   top: 20px;
-}
-
-.loginScreen__gradient {
-  width: 100%;
-  z-index: 1;
-  height: 100vh;
-  background: rgba(0, 0, 0, 0.4);
-  background-image: linear-gradient(
-    to top,
-    rgba(0, 0, 0, 0.8),
-    0,
-    rgba(0, 0, 0, 0) 60%,
-    rgba(0, 0, 0, 0.8) 100%
-  );
 }
 
 .loginScreen__body {
@@ -93,4 +77,22 @@
 
 .loginScreen__input {
   margin: 20px;
+}
+
+@media screen and (max-width: 1366px) {
+  .loginScreen__body > h1 {
+    font-size: 30px;
+    margin-top: 10em;
+  }
+  video {
+    position: fixed;
+  }
+  .loginScreen__logo {
+    width: 50%;
+    z-index: 1;
+    margin-left: 110px;
+  }
+  .loginScreen__button {
+    display: none;
+  }
 }
