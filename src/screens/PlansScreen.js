@@ -7,7 +7,7 @@ function PlansScreen() {
       <div className="plansScreen__info">
         <h2>Basic</h2>
         <h5>720pk</h5>
-        <button>Subscribe</button>
+        <button className="btn">Current</button>
       </div>
       <div className="plansScreen__info">
         <h2>Standart</h2>

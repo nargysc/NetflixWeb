@@ -17,6 +17,15 @@
   text-align: center;
   cursor: pointer;
 }
+.plansScreen__info .btn:focus,
+.plansScreen__info .btn:active {
+  background-color: rgb(140, 140, 140);
+}
+
+.plansScreen__info > button:hover {
+  background-color: #fff;
+  color: #e50914;
+}
 
 .plansScreen__info > h2 {
   display: flex;
@@ -24,11 +33,6 @@
   opacity: 0.8;
   flex-direction: column;
   padding: 10px;
-}
-
-.plansScreen__info > button:hover {
-  background-color: #fff;
-  color: #e50914;
 }
 
 .plansScreen__info > h5 {
